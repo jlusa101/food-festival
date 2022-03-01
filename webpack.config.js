@@ -37,6 +37,14 @@ module.exports = {
           }
         ]
       },
+      devServer: {
+        static: {
+          // tells webpack-dev-server to serve from root folder
+          directory: path.join(__dirname, './'),
+        },
+        compress: true,
+        port: 8080,
+      },
     plugins: [
         new webpack.ProvidePlugin({
           $: "jquery",
